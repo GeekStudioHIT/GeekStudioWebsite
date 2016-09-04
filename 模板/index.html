@@ -179,7 +179,7 @@
 				</div>
 				<div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
 					<!-- <form id="contact-form"> -->
-					<form id="contact-form">
+					<form id="contact-form" onsubmit="joinus()">
                         <div class="col-md-6 col-sm-6">
                           	<input id="name" type="text" class="form-control" placeholder="姓名" required>
                         </div>
@@ -190,10 +190,10 @@
                           	<input id="stuId" type="text" class="form-control" placeholder="学号" required>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                          	<input id="tel" type="tel" class="form-control" placeholder="电话" required>
+                          	<input id="tel" type="tel" class="form-control" placeholder="电话" pattern="^\d{11}$"  required oninvalid="setCustomValidity('请输入正确的11位电话格式');" oninput="setCustomValidity('');">
                         </div>
 						<div class="col-md-6 col-sm-6">
-                          	<input id="qq" type="number" class="form-control" placeholder="QQ" required>
+                          	<input id="qq" type="text" class="form-control" placeholder="QQ" pattern="^[0-9]*$" required oninvalid="setCustomValidity('请输入正确的QQ');" oninput="setCustomValidity('');">
                         </div>
                         <div class="col-md-6 col-sm-6">
                           	<input id="mail" type="email" class="form-control" placeholder="邮箱" required>
@@ -283,36 +283,35 @@
 <script src="js/custom.js"></script>
 
 <script>
-  $(function(){
-    $('#submit').click(function(){	
-	  $.ajax({
-		url:'http://192.168.1.105:8000/joinus',
-		data:{
-		  name:$('#name').val(),
-		  college:$('#college').val(),
-		  stuId:$('#stuId').val(),
-		  tel:$('#tel').val(),
-		  qq:$('#qq').val(),
-		  mail:$('#mail').val(),
-		  interests:$('#interests').val(),
-		},
-		type:'POST',
-		cache:false,
-		success:function(data){
-		  console.log(data);
-		  if(data.msg == "welcome"){
-			alert("Welcome！");
-		  }else{
-			<!-- view(data.msg); -->
-		  }
-		},
-		error:function(){
-		  alert("异常！");
-		}
-	  })
-	})
-  })
-	</script>
+function joinus(){
+  alert("11111111");
+  $.ajax({
+	url:'http://192.168.1.105:8000/joinus',
+	data:{
+	  name:$('#name').val(),
+	  college:$('#college').val(),
+	  stuId:$('#stuId').val(),
+	  tel:$('#tel').val(),
+	  qq:$('#qq').val(),
+	  mail:$('#mail').val(),
+	  interests:$('#interests').val(),
+	},
+	type:'POST',
+	cache:false,
+	success:function(data){
+	  console.log(data);
+	  if(data.msg == "welcome"){
+	    alert("Welcome!");
+	  }else{
+	  <!-- view(data.msg); -->
+	  }
+    },
+	error:function(){
+	  alert("异常！");
+	}
+  });
+}
+</script>
 
 </body>
 </html>
