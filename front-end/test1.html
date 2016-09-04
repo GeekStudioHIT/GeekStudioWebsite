@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test1</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <form onsubmit="postData()" method="post">
+        <input id="name" name="name" /><br/>
+        <input id="password" name="password" /><br/>
+        <input type="submit" />
+    </form>
+<script>
+    function postData() {
+        console.log("lalala");
+        $.ajax({
+            type: 'POST',
+            url: 'http://0.0.0.0:8000/post-test',
+            data: {
+                name: $('#name').val(),
+                password: $('#password').val()
+            },
+            cache: false,
+            success: function (data) {
+                console.log("fuck success");
+            },
+            error: function (data) {
+                console.log("fuck error");
+            }
+        })
+    }
+</script>
+</body>
+</html>

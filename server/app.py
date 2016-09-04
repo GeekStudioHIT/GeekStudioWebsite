@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask.ext.sqlalchemy import SQLAlchemy
 import os
 
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
@@ -9,16 +10,26 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'da
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 
 db = SQLAlchemy(app)
-db.create_all()
+
 
 class StuJoinInfo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True)
-    password = db.Column(db.String(80))
+    college = db.Column(db.String(80))
+    stuId = db.Column(db.String(30), unique=True)
+    tel = db.Column(db.Integer(), unique=True)
+    qq = db.Column(db.Integer(), unique=True)
+    mail = db.Column(db.String(40), unique=True)
+    interests = db.Column(db.Text)
 
-    def __init__(self, name, password):
+    def __init__(self, name, college, stuId, tel, qq, mail, interests):
         self.name = name
-        self.password = password
+        self.college = college
+        self.stuId = stuId
+        self.tel = tel
+        self.qq = qq
+        self.mail = mail
+        self.interests = interests
 
     def __repr__(self):
         return '<User %r>' % self.name
@@ -27,7 +38,15 @@ class StuJoinInfo(db.Model):
 def hello_world():
     return 'Hello World'
 
-@app.route('/joinus', methods=['POST'])
+@app.route('/post-test', methods=['POST'])
+def post_test():
+    name = request.form['name']
+    password = request.form['password']
+    print name
+    print password
+    return 'welcome'
+
+@app.route('/join-us', methods=['POST'])
 def join_us():
     name = request.form['name']
     college = request.form['college']
@@ -50,4 +69,6 @@ def join_us():
 
 
 if __name__ == '__main__':
+    db.drop_all()
+    db.create_all()
     app.run(host='0.0.0.0', port=8000, debug=True)
