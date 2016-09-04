@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>哈尔滨工业大学极客俱乐部</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- stylesheets css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/header.css">
+  	<link rel="stylesheet" href="css/et-line-font.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- <link rel="stylesheet" href="css/vegas.min.css"> -->
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+
+	<!-- <link href='http://fonts.useso.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'> -->
+
+</head>
+<body>
+<!-- preloader section -->
+<section class="preloader">
+	<div class="sk-circle">
+       <div class="sk-circle1 sk-child"></div>
+       <div class="sk-circle2 sk-child"></div>
+       <div class="sk-circle3 sk-child"></div>
+       <div class="sk-circle4 sk-child"></div>
+       <div class="sk-circle5 sk-child"></div>
+       <div class="sk-circle6 sk-child"></div>
+      <div class="sk-circle7 sk-child"></div>
+       <div class="sk-circle8 sk-child"></div>
+       <div class="sk-circle9 sk-child"></div>
+       <div class="sk-circle10 sk-child"></div>
+       <div class="sk-circle11 sk-child"></div>
+       <div class="sk-circle12 sk-child"></div>
+     </div>
+</section>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+
+<!--Replace text with your app name or logo image-->
+      <a class="navbar-brand" href="#">GeekStudio</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+	  <ul class="nav navbar-nav">
+	  <li><a href="product.html">俱乐部简介</a></li>
+	  <li><a href="aboutcompany.html">产品展示</a></li>
+	  <li><a href="aboutus.html">参赛获奖</a></li>
+	  <li><a href="contact_us.html">Join us</a></li>
+	  </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+        <style>
+			ul.timeline {
+				list-style-type: none;
+				background: url("images/product_line.png") repeat-y scroll 120px 0 transparent;
+				margin: 50px 0;
+				padding: 0;
+			}
+			
+			ul.timeline li {
+				position: relative;
+				margin-bottom: 20px;
+			}
+			ul.timeline li .time {
+				position: absolute;
+				width: 90px;
+				text-align: right;
+				left: 0;
+				top: 10px;
+				color: #999;
+			}
+			ul.timeline li .version {
+				position: absolute;
+				width: 290px;
+				text-align: right;
+				left: -200px;
+				<!-- top: 30px; -->
+				top: 0px;
+				font-size: 40px;
+				line-height: 50px;
+				color: #3594cb;
+				overflow: hidden;
+			}
+			ul.timeline li .number {
+				position: absolute;
+				background: url("images/product_dot.png") no-repeat scroll 0 0 transparent;
+				width: 56px;
+				height: 56px;
+				left: 97px;
+				line-height: 56px;
+				text-align: center;
+				color: #fff;
+				font-size: 18px;
+			}
+			ul.timeline li.alt .number {
+				background-image: url("images/product_dot_alt.png");
+			}
+			ul.timeline li .content {
+				margin-left: 180px;
+			}
+			ul.timeline li .content pre {
+				background-color: #3594cb;
+				padding: 20px;
+				color: #fff;
+				font-size: 13px;
+				line-height: 20px;
+			}
+			ul.timeline li.alt .content pre {
+				background-color: #43B1F1;
+			}
+			pre {
+				white-space: pre-wrap;
+				word-wrap: break-word;
+			}
+		</style>
+				
+<ul class="wow timeline" data-wow-delay="1s">
+<div class="wow fadeInUp" data-wow-delay="0.8s">
+<li>
+<!-- <div class="time">2016-12-20</div> -->
+<div class="version">v3.3.0</div>
+<div class="number"></div><div class="content"><pre>
+尚未发布！具体发布时间可能会有调整！
+</pre></div></li></div>
+<div class="wow fadeInUp" data-wow-delay="1.0s"><li><div class="version">v3.2.0</div><div class="number"></div><div class="content"><pre>
++表格增强。
+	+表格列RenderField增加属性ClientHtmlEncode，用于在客户端进行HTML编码。
+		-增加示例：单元格编辑->杂项->客户端HTML编码。
+	-表格的ExpandOnDoubleClick改名为ExpandOnDblClick；选项卡的CloseOnDblclick改名为CloseOnDblClick。
+	-表格增加TreeExpandOnDblClick；树控件增加ExpandOnDblClick。增加示例：树表格->树表格（禁用双击展开树节点）。
+	-修正表格放到启用IFrame的窗体控件中时，在IE下可能会出现行分隔线错位的情况。
+	+删除表格ClearSelectedRowsAfterPaging属性，请使用ClearSelectionBeforePaging属性（不兼容提醒）。
+</pre></div></li></div>
+<div class="wow fadeInUp" data-wow-delay="1.2s"><li>
+<div class="version">v3.1.0</div><div class="number"></div><div class="content"><pre>
++为了方便在源代码视图书写ASPX文件，将部分可空类型转换为不可空类型（不兼容提醒）。
+	
+</pre></div></li></div>
+<div class="wow fadeInUp" data-wow-delay="1.4s"><li>
+<div class="version">v3.0.0</div><div class="number"></div><div class="content"><pre>
+-全面支持手机、平板、桌面，并增加50多个移动端示例！
+-官网示例中在PageBase中统一添加公共CSS样式文件，无需每个页面单独引用。
+-修正在上传文件页面调用Response.Redirect时，网址中的&会被编码为&amp;的问题。
+-智能树菜单加上操作延迟，用户在快速划过MiniMode项时不会切换当前正在显示的菜单。
+-为控件增加AttributeDataTag属性，可以在ASPX标签中自定义标签属性，更新首页示例，简化前后台代码。
+-增加配置项EnableAnimation（仅Webkit浏览器支持动画效果）。
+-增加CustomLanguage配置项，官网示例增加自定义语言包：维语。
++面板与窗体增强。
+</pre></div></li></div>		
+</ul>
+</div>
+
+<!-- modal -->
+
+
+
+<!-- Back top -->
+<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- javscript js -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/vegas.min.js"></script>
+
+<script src="js/wow.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
