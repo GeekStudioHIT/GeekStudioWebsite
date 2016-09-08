@@ -178,12 +178,12 @@
 				</div>
 				<div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
 					<!-- <form id="contact-form"> -->
-					<form id="contact-form" onsubmit="joinus()">
+					<form id="contact-form" onsubmit="joinus()" method="post">
                         <div class="col-md-6 col-sm-6">
                           	<input id="name" type="text" class="form-control" placeholder="姓名" required>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                          	<input id="college" type="text" class="form-control" placeholder="学院" required>
+                          	<input id="specialty" type="text" class="form-control" placeholder="专业" required>
                         </div>
 						<div class="col-md-6 col-sm-6">
                           	<input id="stuId" type="text" class="form-control" placeholder="学号" required>
@@ -281,33 +281,26 @@
 <script src="js/smoothscroll.js"></script>
 <script src="js/custom.js"></script>
 
+<script src="bmob-min.js"></script>
 <script>
 function joinus(){
-  alert("11111111");
-  $.ajax({
-	url:'http://192.168.1.105:8000/joinus',
-	data:{
-	  name:$('#name').val(),
-	  college:$('#college').val(),
-	  stuId:$('#stuId').val(),
-	  tel:$('#tel').val(),
-	  qq:$('#qq').val(),
-	  mail:$('#mail').val(),
-	  interests:$('#interests').val(),
-	},
-	type:'POST',
-	cache:false,
-	success:function(data){
-	  console.log(data);
-	  if(data.msg == "welcome"){
-	    alert("Welcome!");
-	  }else{
-	  <!-- view(data.msg); -->
-	  }
+  Bmob.initialize("20c6504d3392fc9bce23df9052ed9cc8", "9cc94cc3adfd5e5adb2632fb8f8f0174");
+  var GameScore = Bmob.Object.extend("GameScore");
+  var gameScore = new GameScore();
+  gameScore.set("name", $('#name').val());
+  gameScore.set("stuId", $('#stuId').val());
+  gameScore.set("specialty", $('#specialty').val());
+  gameScore.set("tel", $('#tel').val());
+  gameScore.set("qq", $('#qq').val());
+  gameScore.set("mail", $('#mail').val());
+  gameScore.set("interests", $('#interests').val());
+  gameScore.save(null, {
+    success: function(object) {
+      alert("create object success, object id:"+object.id);
     },
-	error:function(){
-	  alert("异常！");
-	}
+    error: function(model, error) {
+      alert("create object fail");
+    }
   });
 }
 </script>
