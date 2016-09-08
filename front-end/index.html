@@ -113,60 +113,6 @@
 	</div>
 </section>
 
-<!-- feature section -->
-<!-- <section id="feature">
-  <div class="container">
-    <div class="row">
-      
-      <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
-        <path d="M0 0 L50 100 L100 0 Z"></path>
-      </svg>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="media wow fadeInUp" data-wow-delay="0.4s">
-          <div class="media-object media-left">
-            <i class="icon icon-laptop"></i>
-          </div>
-          <div class="media-body">
-            <h2 class="media-heading">Responsive</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus lacus nulla, eget varius justo tristique ut.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="media wow fadeInUp" data-wow-delay="0.8s">
-          <div class="media-object media-left">
-            <i class="icon icon-refresh"></i>
-          </div>
-          <div class="media-body">
-            <h2 class="media-heading">Bootstrap</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus lacus nulla, eget varius justo tristique ut.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-8">
-        <div class="media wow fadeInUp" data-wow-delay="1.2s">
-          <div class="media-object media-left">
-            <i class="icon icon-chat"></i>
-          </div>
-          <div class="media-body">
-            <h2 class="media-heading">Support</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus lacus nulla, eget varius justo tristique ut.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="clearfix text-center col-md-12 col-sm-12">
-        <a href="#contact" class="btn btn-default smoothScroll">Join us</a>
-      </div>
-
-    </div>
-  </div>
-</section> -->
-
-<!-- contact section -->
 <section id="contact">
 	<div class="container">
 		<div class="row">
@@ -178,7 +124,7 @@
 				</div>
 				<div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
 					<!-- <form id="contact-form"> -->
-					<form id="contact-form" onsubmit="joinus()" method="post">
+					<form id="contact-form" onsubmit="happy()">
                         <div class="col-md-6 col-sm-6">
                           	<input id="name" type="text" class="form-control" placeholder="姓名" required>
                         </div>
@@ -281,28 +227,35 @@
 <script src="js/smoothscroll.js"></script>
 <script src="js/custom.js"></script>
 
-<script src="bmob-min.js"></script>
+<script src="js/bmob-min.js"></script>
 <script>
-function joinus(){
-  Bmob.initialize("20c6504d3392fc9bce23df9052ed9cc8", "9cc94cc3adfd5e5adb2632fb8f8f0174");
-  var GameScore = Bmob.Object.extend("GameScore");
-  var gameScore = new GameScore();
-  gameScore.set("name", $('#name').val());
-  gameScore.set("stuId", $('#stuId').val());
-  gameScore.set("specialty", $('#specialty').val());
-  gameScore.set("tel", $('#tel').val());
-  gameScore.set("qq", $('#qq').val());
-  gameScore.set("mail", $('#mail').val());
-  gameScore.set("interests", $('#interests').val());
-  gameScore.save(null, {
-    success: function(object) {
-      alert("create object success, object id:"+object.id);
-    },
-    error: function(model, error) {
-      alert("create object fail");
-    }
-  });
+Bmob.initialize("20c6504d3392fc9bce23df9052ed9cc8", "9cc94cc3adfd5e5adb2632fb8f8f0174");
+console.log("init script");
+function joinus(){  
+	console.log("go into");
+	var GameScore = Bmob.Object.extend("GameScore");
+	var gameScore = new GameScore();
+	// 添加数据，第一个入口参数是Json数据
+	gameScore.save({
+	  score: 1337,
+	  playerName: "bmob",
+	  cheatMode: false
+	}, {
+	  success: function(gameScore) {
+		console.log("success");
+		// 添加成功
+	  },
+	  error: function(gameScore, error) {
+		console.log("fail");
+		// 添加失败
+	  }
+	});
 }
+
+function happy() {
+	console.log("happy");
+}
+
 </script>
 
 </body>
