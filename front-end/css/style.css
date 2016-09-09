@@ -72,12 +72,16 @@ nav.navbar{
 }
 
 #about,
+#product
+#winning
 #feature,
 #contact {
   background: #ffffff;
 }
 
 #about,
+#product
+#winning
 #feature,
 #contact,
 footer {
