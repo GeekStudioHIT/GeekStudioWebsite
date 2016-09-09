@@ -134,24 +134,25 @@
 		
 		<div class="col-md-offset-2 col-md-8 col-sm-12" style="padding-left:100px">
 			<div class="col-xs-6 col-sm-6">
-				<p class="wow fadeInUp text-left" data-wow-delay="0.8s"><a href="https://github.com/GeekStudioHIT">GeekStudio Organization</a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="0.9s"><a href="https://github.com/voidhug/PinYinCorrectAffterSpeechRecognition">语音识别后纠错方案</a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.0s"><a href="https://github.com/voidhug/AndroidStepHack">Android 计步器</a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.1s"><a href="https://github.com/voidhug/QtBookMIS">基于 Qt 的图书管理系统</a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.2s"><a href="https://github.com/bceportal">BCE 化学计算网站，已集成到卡西欧计算器</a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/TaikiAkita/NamespaceJS">JavaScript 命名空间构建器 </a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/qq519043202/Who-set-the-sp">js游戏，谁组的暗牧，游戏图片通过爬虫抓取pixiv排行榜 </a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/qq519043202/GetOneMillion">Python制作的APP源码。70行代码，MongoDB插入，聚合，Android界面。附赠Python打包APK教程。 </a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="0.8s"><a href="https://github.com/GeekStudioHIT" target="_blank">GeekStudio Organization</a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="0.9s"><a href="https://github.com/voidhug/PinYinCorrectAffterSpeechRecognition" target="_blank">语音识别后纠错方案</a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.0s"><a href="https://github.com/voidhug/AndroidStepHack" target="_blank">Android 计步器</a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.1s"><a href="https://github.com/voidhug/QtBookMIS" target="_blank">基于 Qt 的图书管理系统</a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.2s"><a href="https://github.com/bceportal" target="_blank">BCE 化学计算网站，已集成到卡西欧计算器</a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/TaikiAkita/NamespaceJS" target="_blank">JavaScript 命名空间构建器 </a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/qq519043202/Who-set-the-sp" target="_blank">js游戏，谁组的暗牧，游戏图片通过爬虫抓取pixiv排行榜 </a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/qq519043202/GetOneMillion" target="_blank">Python制作的APP源码。70行代码，MongoDB插入，聚合，Android界面。附赠Python打包APK教程。 </a></p>
 			</div>
 			<div class="col-xs-6 col-sm-6">
-				<p class="wow fadeInUp text-left" data-wow-delay="0.8s"><a href="https://github.com/voidhug/Melbourne">一个好玩的微信机器人</a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="0.9s"><a href="https://github.com/voidhug/DailyPlanning">个人效率类 App</a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.0s"><a href="https://github.com/ChestnutHeng/KinectToolKit">一个基于 Kinect 的体感游戏</a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.1s"><a href="https://github.com/Zhangxu0501/MyRPC">单机版 RPC 实现</a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.2s"><a href="https://github.com/TaikiAkita/PolymorphicJS">JavaScript 多态函数构建器</a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/qq519043202/hit-spider">哈工大抢课脚本，爬取全校照片脚本，成绩导出脚本，hitwlan连接脚本。 </a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/qq519043202/BILI">B站弹幕爬虫 </a></p>
-				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/qq519043202/BILI_RobFloor">B站抢楼脚本。 </a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="0.8s"><a href="https://github.com/voidhug/Melbourne" target="_blank">一个好玩的微信机器人</a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="0.9s"><a href="https://github.com/voidhug/DailyPlanning" target="_blank">个人效率类 App</a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.0s"><a href="https://github.com/ChestnutHeng/KinectToolKit" target="_blank">一个基于 Kinect 的体感游戏</a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.1s"><a href="https://github.com/Zhangxu0501/MyRPC" target="_blank">单机版 RPC 实现</a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.2s"><a href="https://github.com/TaikiAkita/PolymorphicJS" target="_blank">JavaScript 多态函数构建器</a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/qq519043202/hit-spider" target="_blank">哈工大抢课脚本，爬取全校照片脚本，成绩导出脚本，hitwlan连接脚本。 </a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/qq519043202/BILI" target="_blank">B站弹幕爬虫 </a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="https://github.com/qq519043202/BILI_RobFloor" target="_blank">B站抢楼脚本。 </a></p>
+				<p class="wow fadeInUp text-left" data-wow-delay="1.3s"><a href="http://www.mytodolist.top" target="_blank">MyTodoList Web版</a></p>
 			</div>
 		</div>
 	</div>
