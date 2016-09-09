@@ -162,7 +162,7 @@
 				<!-- <div class="time">2016-12-20</div> -->
 				<!-- <div class="version">v3.3.0</div> -->
 				<div class="number"></div>
-				<div class="content"><pre>张旭 Peking University Hackthon IMB 企业奖</pre></div>
+				<div class="content"><pre><a href="https://github.com/voidhug/PinYinCorrectAffterSpeechRecognition">语音识别后纠错方案</a></pre></div>
 			</li>
 		</div>
 		<div class="wow fadeInUp" data-wow-delay="0.7s">
@@ -170,7 +170,7 @@
 				<!-- <div class="time">2016-12-20</div> -->
 				<!-- <div class="version">v3.3.0</div> -->
 				<div class="number"></div>
-				<div class="content"><pre>朱天成 张旭 触宝 2016 Hackthon 三等奖</pre></div>
+				<div class="content"><pre><a href="https://github.com/voidhug/AndroidStepHack">Android 计步器</a></pre></div>
 			</li>
 		</div>
 		<div class="wow fadeInUp" data-wow-delay="0.9s">
@@ -178,7 +178,7 @@
 				<!-- <div class="time">2016-12-20</div> -->
 				<!-- <div class="version">v3.3.0</div> -->
 				<div class="number"></div>
-				<div class="content"><pre>王一航 HIT-CTF 最强单项奖</pre></div>
+				<div class="content"><pre><a href="https://github.com/voidhug/QtBookMIS">基于 Qt 的图书管理系统</a></pre></div>
 			</li>
 		</div>
 	</ul>
@@ -198,25 +198,25 @@
 					<!-- <form id="contact-form"> -->
 					<form id="contact-for" onsubmit="return false;">
                         <div class="col-md-12 col-sm-6">
-                          	<input id="name" type="text" class="form-control" placeholder="姓名" required>
+                          	<input name="name" id="name" type="text" class="form-control" placeholder="姓名" required>
                         </div>
                         <div class="col-md-12 col-sm-6">
-                          	<input id="specialty" type="text" class="form-control" placeholder="专业" required>
+                          	<input name="specialty" id="specialty" type="text" class="form-control" placeholder="专业" required>
                         </div>
 						<div class="col-md-12 col-sm-6">
-                          	<input id="stuId" type="text" class="form-control" placeholder="学号" required>
+                          	<input name="stuId" id="stuId" type="text" class="form-control" placeholder="学号" required>
                         </div>
                         <div class="col-md-12 col-sm-6">
-                          	<input id="tel" type="tel" class="form-control" placeholder="电话" required>
+                          	<input name="tel" id="tel" type="tel" class="form-control" placeholder="电话" required>
                         </div>
 						<div class="col-md-12 col-sm-6">
-                          	<input id="qq" type="text" class="form-control" placeholder="QQ" required>
+                          	<input name="qq" id="qq" type="text" class="form-control" placeholder="QQ" required>
                         </div>
                         <div class="col-md-12 col-sm-6">
-                          	<input id="mail" type="email" class="form-control" placeholder="邮箱" required>
+                          	<input name="mail" id="mail" type="email" class="form-control" placeholder="邮箱" required>
                         </div>
            			  	<div class="col-md-12 col-sm-12">
-				   			<textarea id="interests" class="form-control" placeholder="感兴趣的技术" rows="6" required></textarea>
+				   			<textarea name="interests" id="interests" class="form-control" placeholder="感兴趣的技术" rows="6" required></textarea>
            			  	</div>
 						<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
 							<input type="submit" class="form-control submit" id="submit" value="Join us">
@@ -264,13 +264,39 @@
 <script src="js/custom.js"></script>
 
 
-<!-- <script src="js/bmob-min.js"></script> -->
-<!-- <script>
+<script src="js/bmob-min.js"></script>
+
+<script>
+Bmob.initialize("20c6504d3392fc9bce23df9052ed9cc8", "9cc94cc3adfd5e5adb2632fb8f8f0174");
+
+
 $.validator.setDefaults({
     submitHandler: function() {
-      alert("提交事件!");
+		console.log("go into");
+		var Freshman = Bmob.Object.extend("Freshman");
+		var freshman = new Freshman();
+		// 添加数据，第一个入口参数是Json数据
+		freshman.save({
+		  name: ,
+		  specialty: "bmob",
+		  stuId: false,
+		  interests:,
+		  mail:,
+		  qq:,
+		  tel:,
+		}, {
+		  success: function(freshman) {
+			console.log("success");
+			// 添加成功
+		  },
+		  error: function(freshman, error) {
+			console.log("fail");
+			// 添加失败
+		  }
+		});
     }
 });
+
 $().ready(function() {
     $("#contact-for").validate({
 		rules: {
@@ -280,53 +306,49 @@ $().ready(function() {
 			interests:"required",
 			mail: {
 				required: true,
-				email: true
+				email: true,
 			},
 			qq: {
 				required: true,
-				qq: true
+				number: true,
 			},
 			tel: {
 				required: true,
-				tel:true
+				checkTel:true,
 			},
 		},
 		messages:{
-			name:{
-				required:"请填写此段信息",
-			},
-			specialty:{
-				required:"请填写此段信息",
-			},
-			stuId:{
-				required:"请填写此段信息",
-			},
-			interests:{
-				required:"请填写此段信息",
-			},
-			mail:{
-				required:"请填写此段信息",
-				mail:"请输入正确的E-Mail地址"
-			},
-			qq:{
-				required:"请填写此段信息",
-			},
-			tel:{
-				required:"请填写此段信息",
-			},
+			name:"请填写此段信息",
+			specialty:"请填写此段信息",
+			stuId:"请填写此段信息",
+			interests:"请填写此段信息",
+			mail:"请输入正确的E-mail地址",
+			qq:"请填写正确的QQ信息",
+			tel:"请输入正确的11位电话格式",
 		},
 	});
-	$.validate.addMethod("qq", function(value, element, params){
-		var qq = /^[0-9]*$/;
-		return (qq.test(value));
-	}, "请输入正确的QQ");
-	$.validate.addMethod("tel", function(value, element, params){
-		var tel = /^(((13[0-9]{1})|(15[0-35-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
-		return (tel.test(value));
-	}, "请输入正确的11位电话格式");
+
+	
+	$.validator.addMethod("checkTel",function(value,element,params){  
+		var checkTel = /^1\d{10}$/;  
+		return this.optional(element)||(checkTel.test(value));  
+	},"请输入正确的11位电话格式");
 	
 });
+
+
+
 </script>
+
+<!-- $.validate.addMethod("qq", function(value, element, params){
+	var qq = /^[0-9]*$/;
+	return (qq.test(value));
+}, "请输入正确的QQ");
+$.validate.addMethod("tel", function(value, element, params){
+	var tel = /^(((13[0-9]{1})|(15[0-35-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+	return (tel.test(value));
+}, "请输入正确的11位电话格式"); -->
+
 <!-- <script>
 	function happy(){
 		console.log("done");
