@@ -222,7 +222,6 @@ Bmob.initialize("20c6504d3392fc9bce23df9052ed9cc8", "9cc94cc3adfd5e5adb2632fb8f8
 
 $.validator.setDefaults({
     submitHandler: function() {
-		console.log("go into");
 		var FreshMan = Bmob.Object.extend("FreshMan");
 		var freshman = new FreshMan();
 		// 添加数据，第一个入口参数是Json数据
@@ -237,6 +236,7 @@ $.validator.setDefaults({
 		}, {
 		  success: function(freshman) {
 			  location.reload();
+			  $("html,body").animate({scrollTop: top}, 1000);
 		  },
 		  error: function(freshman, error) {
 			  alert("服务器开小差了");
