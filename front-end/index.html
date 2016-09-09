@@ -273,13 +273,13 @@ $.validator.setDefaults({
 		var freshman = new FreshMan();
 		// 添加数据，第一个入口参数是Json数据
 		freshman.save({
-		  name: $("name").val(),
-		  specialty: $("specialty").val(),
-		  stuId: $("stuId").val(),
-		  interests: $("interests").val(),
-		  mail: $("mail").val(),
-		  qq: $("qq").val(),
-		  tel: $("tel").val(),
+		  name: $("#name").val(),
+		  specialty: $("#specialty").val(),
+		  stuId: $("#stuId").val(),
+		  interests: $("#interests").val(),
+		  mail: $("#mail").val(),
+		  qq: $("#qq").val(),
+		  tel: $("#tel").val(),
 		}, {
 		  success: function(freshman) {
 			console.log("success");
