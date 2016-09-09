@@ -279,13 +279,10 @@ $.validator.setDefaults({
 		  tel: $("#tel").val(),
 		}, {
 		  success: function(freshman) {
-			console.log("success");
-			// 添加成功
+			  location.reload();
 		  },
 		  error: function(freshman, error) {
-			  console.log(error);
-			console.log("fail");
-			// 添加失败
+			  alert("服务器开小差了");
 		  }
 		});
     }
