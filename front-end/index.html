@@ -63,7 +63,7 @@
 	  <li><a class="smoothScroll" href="#about">俱乐部简介</a></li>
 	  <li><a href="product.html">产品展示</a></li>
 	  <li><a href="aboutus.html">参赛获奖</a></li>
-	  <li><a class="smoothScroll" href="#contact">Join us</a></li>
+	  <li><a class="smoothScroll">Join us</a></li>
 	  </ul>
     </div>
   </div>
@@ -247,9 +247,9 @@
 
 <!-- javscript js -->
 <!-- <script src="js/jquery.js"></script> -->
-<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
-<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
-<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/messages_zh.js"></script>
 
 <script src="js/bootstrap.min.js"></script>
 
@@ -263,14 +263,14 @@
 <script src="js/bmob-min.js"></script>
 
 <script>
-Bmob.initialize("20c6504d3392fc9bce23df9052ed9cc8", "9cc94cc3adfd5e5adb2632fb8f8f0174");
+Bmob.initialize("69e0cd9b1650862ebbe55ed163c53e6d", "1da70f84869d7c84ef1bba5ecceae9d6");
 
 
 $.validator.setDefaults({
     submitHandler: function() {
 		console.log("go into");
-		var Freshman = Bmob.Object.extend("Freshman");
-		var freshman = new Freshman();
+		var FreshMan = Bmob.Object.extend("FreshMan");
+		var freshman = new FreshMan();
 		// 添加数据，第一个入口参数是Json数据
 		freshman.save({
 		  name: $("name").val(),
@@ -286,6 +286,7 @@ $.validator.setDefaults({
 			// 添加成功
 		  },
 		  error: function(freshman, error) {
+			  console.log(error);
 			console.log("fail");
 			// 添加失败
 		  }
