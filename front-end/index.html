@@ -113,13 +113,27 @@
 		</div>
 	</div>
 </section>
-<section id="about">
+
+<section id="awarding">
+	<div class="container">
+		<div class="section-title">
+			<h1 class="wow fadeInUp text-center" data-wow-delay="0.3s">our award-winning</h1>
+			<p class="wow fadeInUp text-center" data-wow-delay="0.6s">Welcome to join us! Welcome to join GeekStudio! Need is original and novel, blind follow and ignorance is not to be forgiven.</p>
+		</div>
+		<div class="awarding-container" style="padding-left:200px">
+			<h3 class="text-left">张旭 Peking University Hackthon IBM 企业奖</h3>
+			<h3 class="text-left">朱天成 张旭 触宝 2016 Hackthon 三等奖</h3>
+			<h3 class="text-left">王一航 HIT-CTF 最强单项奖</h3>
+		</div>
+	</div>
+</section>
+<section id="awarding">
 <div class="container">
 	<div class="section-title">
 		<h1 class="wow fadeIn" data-wow-delay="0.2s">our award-winning</h1>
 		<h3 class="wow fadeInUp" data-wow-delay="0.4s">GeekStudio is based in Harbin</h3>
 	</div>
-				
+	
 	<ul class="timeline">
 		<div class="wow fadeInUp" data-wow-delay="0.5s">
 			<li>
@@ -152,7 +166,7 @@
 <section id="about">
 <div class="container">
 	<div class="section-title">
-		<h1 class="wow fadeIn" data-wow-delay="0.2s">our award-winning</h1>
+		<h1 class="wow fadeIn" data-wow-delay="0.2s">our product</h1>
 		<h3 class="wow fadeInUp" data-wow-delay="0.4s">GeekStudio is based in Harbin</h3>
 	</div>
 				
@@ -259,13 +273,13 @@ $.validator.setDefaults({
 		var freshman = new Freshman();
 		// 添加数据，第一个入口参数是Json数据
 		freshman.save({
-		  name: ,
-		  specialty: "bmob",
-		  stuId: false,
-		  interests:,
-		  mail:,
-		  qq:,
-		  tel:,
+		  name: $("name").val(),
+		  specialty: $("specialty").val(),
+		  stuId: $("stuId").val(),
+		  interests: $("interests").val(),
+		  mail: $("mail").val(),
+		  qq: $("qq").val(),
+		  tel: $("tel").val(),
 		}, {
 		  success: function(freshman) {
 			console.log("success");
